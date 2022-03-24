@@ -1,4 +1,4 @@
-code = "25×"
+code = "56[1++]ε"
 pc = 1
 stack = {}
 status = "normal"
@@ -81,6 +81,7 @@ function execchar(char)
 	elseif char == "ε" then
 		--aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 		--TODO: unbee functions containing bracketoids
+		--TODO unbee ALL OF THIS this is so broken fucking aaa
 		x = table.remove(stack)
 		for i = 1, utf8.len(x.value) do execchar(unich(x.value,i)) end
 
